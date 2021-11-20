@@ -19,7 +19,7 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('friends', views.friends),
+    path('', views.index, name = 'index'),
+    path('friends', views.friends, name = 'friends'),
     path('messedge', views.messedge),
 ]
