@@ -6,5 +6,5 @@ def index(request):
 def friends(request):
 	return render(request, 'posts/friends.html')
 
-def messedge(request):
-	return render(request, 'posts/messedge.html')		
+def login(request):
+	return render(request, 'posts/login.html')		
