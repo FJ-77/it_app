@@ -7,6 +7,7 @@
 </head>
 <body>
   <link href="{% static 'posts/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'posts/css/custom.css' %}" rel="stylesheet">
   <!-- JavaScript Bundle with Popper -->
   <script src="{% static 'posts/js/bootstrap.bundle.min.js' %}" ></script> 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,6 +25,12 @@
           <a class="nav-link" href=" {% url 'login' %} ">Login</a>
         </li>
           </a>
+        <li>
+          <a class = "nav-link" href=" {% url 'post_list' %} ">Post_list</a>
+        </li>
+        <li>
+          <a class = "nav-link" href=" {% url 'ad_table' %} ">Advertisment_table</a>
+        </li>  
         </li> 
       </ul>
       <form class="d-flex">

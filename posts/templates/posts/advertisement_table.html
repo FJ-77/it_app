@@ -1,0 +1,45 @@
+{% extends 'posts/_base.html' %}
+{% block content %}
+<div class="container">
+	<div class="row">
+		<div class="container">
+			<form action=" {% url 'post_list' %} ">
+			<div class="row">
+				<div class="input-group">
+				  <div class="form-outline">
+				    <input type="text" id="form1" class="form-control" placeholder="Что вы ищете?" />
+				    <label class="form-label" for="form1">Search</label>
+				  </div>
+				<div class="row">	  
+				  <button type="button" class="btn btn-primary">
+				    <i class="fas fa-search"></i>
+				  </button>
+				</div> 
+				</div>  
+			</div>
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">ID</th>
+		      <th scope="col">Title</th>
+		      <th scope="col">Text</th>
+		      <th scope="col">Date</th>
+		      <th scope='col'>Views</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <tr>
+		    {% for a in adverts %}	
+		      <th scope="row">{{ a.id }}</th>
+		      <td>{{ a.title }}</td>
+		      <td>{{ a.text }}</td>
+		      <td>{{ a.creationdate }}</td>
+		      <td>{{ a.view_num }}</td>
+		    </tr>
+		    {% endfor %}  
+		  </tbody>
+		</table>
+		</div>
+	</div>
+</div>		
+{% endblock %}

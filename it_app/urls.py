@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views.index, name = 'index'),
     path('friends', views.friends, name = 'friends'),
     path('login', views.login, name = 'login'),
+    path('posts', views.post_list, name = 'post_list'),
+    path('table', views.advertisement_table, name = 'ad_table'),
 ]

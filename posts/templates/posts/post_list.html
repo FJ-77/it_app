@@ -1,0 +1,13 @@
+{% extends 'posts/_base.html' %}
+{% load static %}
+{% block content %}
+	<div class="container">
+		<div class="row mt-5">
+			{% for p in posts %}
+			<span class = "post_title"> {{ p.title }} </span>
+			<p> {{ p.text }} </p>	
+			<hr>	
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
