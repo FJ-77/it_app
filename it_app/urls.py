@@ -18,10 +18,15 @@ from posts import views
 from django.urls import path
 
 urlpatterns = [
+#______________main_________________
     path('admin/', admin.site.urls),
     path('', views.index, name = 'index'),
+#____________friends______________
     path('friends', views.friends, name = 'friends'),
     path('login', views.login, name = 'login'),
+#_________________posts____________________________   
     path('posts', views.post_list, name = 'post_list'),
+#_________________ADS____________________    
     path('table', views.advertisement_table, name = 'ad_table'),
+    path('table/<pk>', views.advertisement_detail, name = 'advert_detail')
 ]

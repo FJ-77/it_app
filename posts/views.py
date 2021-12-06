@@ -29,3 +29,10 @@ def advertisement_table(request):
 		'search_word': search
 	}	
 	return render(request, 'posts/advertisement_table.html', context)
+
+def advertisement_detail(request,pk):
+	advert = Advertisement.objects.get(pk=pk)	
+	context = {
+		'advert': advert
+	}
+	return render(request, "posts/advert_detail.html", context)
