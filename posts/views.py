@@ -19,8 +19,13 @@ def post_list(request):
 	return render(request, 'posts/post_list.html', context)		
 
 def advertisement_table(request):
-	adverts = Advertisement.objects.all()
+	search = request.GET.get('q', '')
+	if search:
+		adverts = Advertisement.objects.filter(title__contains=search)
+	else:	
+		adverts = Advertisement.objects.all()
 	context = {
-		'adverts': adverts
+		'adverts': adverts,
+		'search_word': search
 	}	
 	return render(request, 'posts/advertisement_table.html', context)
